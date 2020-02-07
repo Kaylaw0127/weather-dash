@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <!--header-->
+    <nav class="header header-dark bg-dark">
+        <h1 class="text-center text-white pb-3 pt-3">Weather Dashboard</h1>
+    </nav>
+
+    <!--body-->
+
+    <div class="container float-left">
+        <div class="col-4">
+            <h3>Search for a City:</h3>
+            <div class="input-group  mb-3 ">
+                <input type="text" class="form-control" id="city-input" placeholder="" aria-label="Recipient's username"
+                    aria-describedby="searchBtn">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="searchBtn">Search</button>
+                </div>
+            </div>
+            <div id="saved-cities"></div>
+        </div>
+    </div>
+    <div class="container float-right">
+        <div class="col-8">
+            <div class="block border mx-auto">
+                <div class="result-name mx-auto" id="result-name">City Weather Results</div>
+                <img class="result-icon" id="result-icon"></img>
+                <div id="date-name"></div>
+                <div class="result-temp" id="result-temp"></div>
+                <div class="result-humidity" id="result-humidity"></div>
+                <div class="result-wind-speed" id="result-wind-speed"></div>
+                <div class="result-uv-index" id="result-uv-index"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container float-right">
+        <div class="col-sm-8">
+            <div class="row">
+                <h3>5-Day Forcast:</h3>
+            </div>
+            <div class="row">
+                <div class="card mx-auto" style="width: 8rem; height: 8 rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" id="day1-date">City</h5>
+                        <img class="day1Icon" id="day1Icon"></img>
+                        <p class="card-text" id="day1Temp"></p>
+                        <p class="card-text" id="day1Humidity"></p>
+
+                    </div>
+                </div>
+                <div class="card mx-auto" style="width: 8rem; height: 8 rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" id="day2-date">City</h5>
+                        <img class="card-subtitle mb-2 text-muted" id="day2-icon"></img>
+                        <p class="card-text" id="day2-temp"></p>
+                        <p class="card-text" id="day2-humidity"></p>
+
+                    </div>
+                </div>
+                <div class="card mx-auto" style="width: 8rem; height: 8 rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" id="day3-date">City</h5>
+                        <img class="card-subtitle mb-2 text-muted" id="day3-icon"></img>
+                        <p class="card-text" id="day3-temp"></p>
+                        <p class="card-text" id="day3-humidity"></p>
+
+                    </div>
+                </div>
+                <div class="card mx-auto" style="width: 8rem; height: 8 rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" id="day4-date">City</h5>
+                        <img class="card-subtitle mb-2 text-muted" id="day4-icon"></img>
+                        <p class="card-text" id="day4-temp"></p>
+                        <p class="card-text" id="day4-humidity"></p>
+
+                    </div>
+                </div>
+                <div class="card mx-auto" style="width: 8rem; height: 8 rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" id="day5-date">City</h5>
+                        <img class="card-subtitle mb-2 text-muted" id="day5-icon"></img>
+                        <p class="card-text" id="day5-temp"></p>
+                        <p class="card-text" id="day5-humidity"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
