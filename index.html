@@ -21,29 +21,27 @@
 
     <!--body-->
 
-    <div class="container float-left">
-        <div class="col-4">
-            <h3>Search for a City:</h3>
-            <div class="input-group  mb-3 ">
-                <input type="text" class="form-control" id="city-input" placeholder="" aria-label="Recipient's username"
-                    aria-describedby="searchBtn">
-                <div class="input-group-append">
-                    <button class="btn btn-primary" type="button" id="searchBtn">Search</button>
-                </div>
+    <div class="container container-left col-3">
+        <div class="input-group  mb-3">
+            <input type="text" class="form-control" id="city-input" placeholder="Search for a city" aria-label="Recipient's username"
+                aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" id="button-addon2">search</button>
             </div>
-            <div id="saved-cities"></div>
+            <div id="buttons-view"></div>
         </div>
     </div>
-    <div class="container float-right">
-        <div class="col-8">
-            <div class="block border mx-auto">
-                <div class="result-name mx-auto" id="result-name">City Weather Results</div>
-                <img class="result-icon" id="result-icon"></img>
-                <div id="date-name"></div>
-                <div class="result-temp" id="result-temp"></div>
-                <div class="result-humidity" id="result-humidity"></div>
-                <div class="result-wind-speed" id="result-wind-speed"></div>
-                <div class="result-uv-index" id="result-uv-index"></div>
+   
+
+    <div class="container container-right col-8">
+        <div class="block border mx-auto" >
+            <h3 class="result-name mx-auto" id="result-name">Weather Result for City</h3>
+            <img class="result-icon" id="result-icon"></img>
+            <div id="date-name"></div>
+            <div class="result-temp" id="result-temp"></div>
+            <div class="result-humidity" id="result-humidity"></div>
+            <div class="result-wind-speed" id="result-windspeed"></div>
+            <div class="result-uv-index" id="result-uvindex"></div>
             </div>
         </div>
     </div>
@@ -54,48 +52,48 @@
                 <h3>5-Day Forcast:</h3>
             </div>
             <div class="row">
-                <div class="card mx-auto" style="width: 8rem; height: 8 rem;">
-                    <div class="card-body">
-                        <h5 class="card-title" id="day1-date">City</h5>
-                        <img class="day1Icon" id="day1Icon"></img>
-                        <p class="card-text" id="day1Temp"></p>
-                        <p class="card-text" id="day1Humidity"></p>
-
-                    </div>
+                <div class="card mx-auto" style="width: 7rem;">
+                <div class="card-body">
+                  <h5 class="card-title" id="day1date">City</h5>
+                  <img class="day1Icon" id="day1Icon"></img>
+                  <p class="card-text" id="day1Temp"></p>
+                  <p class="card-text" id="day1Humidity"></p>
+                  
                 </div>
-                <div class="card mx-auto" style="width: 8rem; height: 8 rem;">
-                    <div class="card-body">
-                        <h5 class="card-title" id="day2-date">City</h5>
-                        <img class="card-subtitle mb-2 text-muted" id="day2-icon"></img>
-                        <p class="card-text" id="day2-temp"></p>
-                        <p class="card-text" id="day2-humidity"></p>
-
-                    </div>
+              </div>
+              <div class="card mx-auto" style="width: 7rem;">
+                <div class="card-body">
+                  <h5 class="card-title" id="day2date">City</h5>
+                  <img class="card-subtitle mb-2 text-muted" id="day2Icon"></img>
+                  <p class="card-text" id="day2Temp"></p>
+                  <p class="card-text" id="day2Humidity"></p>
+                  
                 </div>
-                <div class="card mx-auto" style="width: 8rem; height: 8 rem;">
-                    <div class="card-body">
-                        <h5 class="card-title" id="day3-date">City</h5>
-                        <img class="card-subtitle mb-2 text-muted" id="day3-icon"></img>
-                        <p class="card-text" id="day3-temp"></p>
-                        <p class="card-text" id="day3-humidity"></p>
-
-                    </div>
+              </div>
+              <div class="card mx-auto" style="width: 7rem;">
+                <div class="card-body">
+                  <h5 class="card-title" id="day3date">City</h5>
+                  <img class="card-subtitle mb-2 text-muted" id="day3Icon"></img>
+                  <p class="card-text" id="day3Temp"></p>
+                  <p class="card-text" id="day3Humidity"></p>
+                  
                 </div>
-                <div class="card mx-auto" style="width: 8rem; height: 8 rem;">
-                    <div class="card-body">
-                        <h5 class="card-title" id="day4-date">City</h5>
-                        <img class="card-subtitle mb-2 text-muted" id="day4-icon"></img>
-                        <p class="card-text" id="day4-temp"></p>
-                        <p class="card-text" id="day4-humidity"></p>
-
-                    </div>
+              </div>
+              <div class="card mx-auto" style="width: 7rem;">
+                <div class="card-body">
+                  <h5 class="card-title" id="day4date">City</h5>
+                  <img class="card-subtitle mb-2 text-muted" id="day4Icon"></img>
+                  <p class="card-text" id="day4Temp"></p>
+                  <p class="card-text" id="day4Humidity"></p>
+                  
                 </div>
-                <div class="card mx-auto" style="width: 8rem; height: 8 rem;">
-                    <div class="card-body">
-                        <h5 class="card-title" id="day5-date">City</h5>
-                        <img class="card-subtitle mb-2 text-muted" id="day5-icon"></img>
-                        <p class="card-text" id="day5-temp"></p>
-                        <p class="card-text" id="day5-humidity"></p>
+              </div>
+              <div class="card mx-auto" style="width: 7rem;">
+                <div class="card-body">
+                  <h5 class="card-title" id="day5date">City</h5>
+                  <img class="card-subtitle mb-2 text-muted" id="day5Icon"></img>
+                  <p class="card-text" id="day5Temp"></p>
+                  <p class="card-text" id="day5Humidity"></p>
                     </div>
                 </div>
             </div>
@@ -116,3 +114,4 @@
 </body>
 
 </html>
+

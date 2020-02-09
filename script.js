@@ -1,4 +1,10 @@
-var city = "miami"
+var cities = [`Sacramento`, `Seattle`, `Denver`, `Portland`, `Miami`]
+
+
+
+function displayWeatherInfo() {
+
+    var city = $(this).attr("data-name")
     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=3455836d834ccb1cfc79c01accd2b751";
 
 
@@ -10,5 +16,5 @@ var city = "miami"
 
     }).then(function (response) {
         console.log(queryURL)
-        console.log(response)
     })
+}
