@@ -1,7 +1,7 @@
 var cities = ['Sacramento', 'Denver', 'Seattle', 'Portland', 'Miami', 'Austin']
 
 // display date in result section
-var display = moment().format('dddd, MMMM Do')
+var display = moment().format('ddd, MMMM Do')
 var date = $('#date')
 $(date).html(display)
 
@@ -86,12 +86,11 @@ function displayWeatherInfo () {
 
     for(var i = 0; i < response.list.length; i+=8 ) {
 
-    var cardDate = new Date(response.list[i].dt_txt)
-    var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
-    cardDate = cardDate.toLocaleDateString("en-US", options)
+    var forcastDate = new Date(response.list[i].dt_txt)
+    forcastDate = forcastDate.toLocaleDateString("en-US")
 
         // what is inside each card for the forcast
-        $(`#day${index}Date`).text(cardDate)
+        $(`#day${index}Date`).text(forcastDate)
         $(`#day${index}Temp`).text(`Temp: ` + temp + `F°`)
         $(`#day${index}Humidity`).text(`Humidity: ` + humidity + `%`)
 
@@ -139,7 +138,7 @@ $(savedBtn).empty();
     // Then dynamicaly generates buttons for each city in the array
      var a = $("<button>");
     // Adds a class of city to our button
-     a.addClass("city btn btn-primary m-1 col-12");
+     a.addClass("city btn btn-dark m-2 p-2 col-12");
     // Added a data-attribute
      a.attr("data-name", cities[i]);
     // Provided the initial button text

@@ -1,3 +1,16 @@
-.result-name {
-    padding: 0px;
+#header-weather {
+    color: #63595C;
+    font-weight: bold;
+}
+body {
+     background-color: #646881;
+}
+
+#weather-result {
+    background-color:#BFB1B6;
+}
+
+#saved-buttons {
+    background-color: #646881 !important;
+    border-color: #646881 !important;
 }

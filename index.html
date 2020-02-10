@@ -15,27 +15,27 @@
 
 <body>
     <!--header-->
-    <nav class="header header-dark bg-dark">
-        <h1 class="text-center text-white pb-3 pt-3">Weather Dashboard</h1>
+    <nav class="header header-dark bg-light">
+        <h1 class="text-center pb-3 pt-3" id="header-weather">Weather Dashboard</h1>
     </nav>
 
     <!--body-->
 
     <!-- city button and input section -->
-    <div class="container float-left col-3">
-        <div class="input-group  mb-3">
+    <div class="container float-left col-3 pt-3">
+        <div class="input-group mb-3">
             <input type="text" class="form-control" id="city-input" placeholder="Search for a city" aria-label="Recipient's username"
                 aria-describedby="button">
             <div class="input-group-append">
-                <button class="btn btn-primary" type="button" id="button-search">search</button>
+                <button class="btn btn-dark" type="button" id="button-search">search</button>
             </div>
-            <div id="saved-buttons"></div>
+            <button id="saved-buttons"></div>
         </div>
     </div>
    
 <!-- weather result section-->
-    <div class="container float-right col-8">
-        <div class="block border text-center" >
+    <div class="container float-right col-8 p-3">
+        <div class="text-center" id="weather-result">
             <h1 class="result-name text-center" id="result-name"></h1>
             <h4 class="date text-center" id="date"></h3>
             <img class="result-icon" id="result-icon"></img>
@@ -50,48 +50,48 @@
 <!-- 5 day forcast section -->
     <div class="container float-right col-8">
             <div class="row">
-                <h3 class="pt-5 pb-3">5-Day Forcast:</h3>
+                <h3 class="pt-5 pb-0 text-white">5-Day Forcast:</h3>
             </div>
             <div class="row">
-                <div class="card mx-auto" style="width: 7rem;">
+                <div class="card mx-auto" style="width: 8rem;">
                 <div class="card-body">
-                  <h5 class="card-title" id="day1Date"></h5>
+                  <h6 class="card-title" id="day1Date"></h6>
                   <img class="day1Icon" id="day1Icon"></img>
                   <p class="card-text" id="day1Temp"></p>
                   <p class="card-text" id="day1Humidity"></p>
                   
                 </div>
               </div>
-              <div class="card mx-auto" style="width: 7rem;">
+              <div class="card mx-auto" style="width: 8rem;">
                 <div class="card-body">
-                  <h5 class="card-title" id="day2Date"></h5>
+                  <h6 class="card-title" id="day2Date"></h6>
                   <img class="card-subtitle mb-2 text-muted" id="day2Icon"></img>
                   <p class="card-text" id="day2Temp"></p>
                   <p class="card-text" id="day2Humidity"></p>
                   
                 </div>
               </div>
-              <div class="card mx-auto" style="width: 7rem;">
+              <div class="card mx-auto" style="width: 8rem;">
                 <div class="card-body">
-                  <h5 class="card-title" id="day3Date"></h5>
+                  <h6 class="card-title" id="day3Date"></h6>
                   <img class="card-subtitle mb-2 text-muted" id="day3Icon"></img>
                   <p class="card-text" id="day3Temp"></p>
                   <p class="card-text" id="day3Humidity"></p>
                   
                 </div>
               </div>
-              <div class="card mx-auto" style="width: 7rem;">
+              <div class="card mx-auto" style="width: 8rem;">
                 <div class="card-body">
-                  <h5 class="card-title" id="day4Date"></h5>
+                  <h6 class="card-title" id="day4Date"></h6>
                   <img class="card-subtitle mb-2 text-muted" id="day4Icon"></img>
                   <p class="card-text" id="day4Temp"></p>
                   <p class="card-text" id="day4Humidity"></p>
                   
                 </div>
               </div>
-              <div class="card mx-auto" style="width: 7rem;">
+              <div class="card mx-auto" style="width: 8rem;">
                 <div class="card-body">
-                  <h5 class="card-title" id="day5Date"></h5>
+                  <h6 class="card-title" id="day5Date"></h6>
                   <img class="card-subtitle mb-2 text-muted" id="day5Icon"></img>
                   <p class="card-text" id="day5Temp"></p>
                   <p class="card-text" id="day5Humidity"></p>
