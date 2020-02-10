@@ -16,11 +16,17 @@ var cities = ['Sacramento', 'Denver', 'Seattle', 'Portland', 'Miami', 'Austin']
         var result = $('#result-name');
     
         var name = response.city.name;
-    
+        
         var cityName = $(result).text(name);
-    
+        
         result.append(cityName)
     }) 
+
+    // display date in result section
+    var display = moment().format('dddd, MMMM Do YYYY')
+    var date = $('#date')
+    $(date).html(display)
+    
  }
 
  // Function for displaying weather data
