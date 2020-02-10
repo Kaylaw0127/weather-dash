@@ -32,8 +32,10 @@ function displayWeatherInfo () {
     var humidityResult = $("#result-humidity")
     var windSpeedResult = $("#result-wind-speed")
 
-    var tempResult = response.list[0].main.temp
-    $(temperature).text("Temperature: " + temp + "˚F")
+    var temp = response.list[0].main.temp
+    $(tempResult).text("Temperature: " + temp + "˚F")
+
+
 }) 
 }
 
