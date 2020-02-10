@@ -55,32 +55,75 @@ function displayWeatherInfo () {
     var icon = response.list[0].weather[0].icon
 
     if (icon == `01d` || icon == `01n`) {
-        var image = $(`#result-icon`).attr(`src`, clear)
-        $(`#result-icon`).append(image)
+        var image = $(iconResult).attr(`src`, clear)
+        $(iconResult).append(image)
     } else if (icon == `02d` || icon == `02n`) {
-        var image = $(`#result-icon`).attr(`src`, fewClouds)
-        $(`#result-icon`).append(image)
+        var image = $(iconResult).attr(`src`, fewClouds)
+        $(iconResult).append(image)
     } else if (icon == `03d` || icon == `03n`) {
-        var image = $(`#result-icon`).attr(`src`, scatteredClouds)
-        $(`#result-icon`).append(image)
+        var image = $(iconResult).attr(`src`, scatteredClouds)
+        $(iconResult).append(image)
     } else if (icon == `04d` || icon == `04n`) {
-        var image = $(`#result-icon`).attr(`src`, brokenClouds)
-        $(`#result-icon`).append(image)
+        var image = $(iconResult).attr(`src`, brokenClouds)
+        $(iconResult).append(image)
     } else if (icon == `09d` || icon == `09n`) {
-        var image = $(`#result-icon`).attr(`src`, showerRain)
-        $(`#result-icon`).append(image)
+        var image = $(iconResult).attr(`src`, showerRain)
+        $(iconResult).append(image)
     } else if (icon == `10d` || icon == `10n`) {
-        var image = $(`#result-icon`).attr(`src`, rain)
-        $(`#result-icon`).append(image)
+        var image = $(iconResult).attr(`src`, rain)
+        $(iconResult).append(image)
     } else if (icon == `11d` || icon == `11n`) {
-        var image = $(`#result-icon`).attr(`src`, thunderStorm)
-        $(`#result-icon`).append(image)
+        var image = $(iconResult).attr(`src`, thunderStorm)
+        $(iconResult).append(image)
     } else if (icon == `13d` || icon == `13n`) {
-        var image = $(`#result-icon`).attr(`src`, snow)
-        $(`#result-icon`).append(image)
+        var image = $(iconResult).attr(`src`, snow)
+        $(iconResult).append(image)
     }
 
-}) 
+    // 5 day forcast
+
+    var index = 1;
+
+    for(var i = 0; i < response.list.length; i+=8 ) {
+
+    var cardDate = new Date(response.list[i].dt_txt)
+    var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+    cardDate = cardDate.toLocaleDateString("en-US", options)
+
+        // what is inside each card for the forcast
+        $(`#day${index}Date`).text(cardDate)
+        $(`#day${index}Temp`).text(`Temp: ` + temp + `F°`)
+        $(`#day${index}Humidity`).text(`Humidity: ` + humidity + `%`)
+
+            if (icon == `01d` || icon == `01n`) {
+                var image = $(`#day${index}Icon`).attr(`src`, clear)
+                $(`#day${index}Icon`).append(image)
+            } else if (icon == `02d` || icon == `02n`) {
+                var image = $(`#day${index}Icon`).attr(`src`, fewClouds)
+                $(`#day${index}Icon`).append(image)
+            } else if (icon == `03d` || icon == `03n`) {
+                var image = $(`#day${index}Icon`).attr(`src`, scatteredClouds)
+                $(`#day${index}Icon`).append(image)
+            } else if (icon == `04d` || icon == `04n`) {
+                var image = $(`#day${index}Icon`).attr(`src`, brokenClouds)
+                $(`#day${index}Icon`).append(image)
+            } else if (icon == `09d` || icon == `09n`) {
+                var image = $(`#day${index}Icon`).attr(`src`, showerRain)
+                $(`#day${index}Icon`).append(image)
+            } else if (icon == `10d` || icon == `10n`) {
+                var image = $(`#day${index}Icon`).attr(`src`, rain)
+                $(`#day${index}Icon`).append(image)
+            } else if (icon == `11d` || icon == `11n`) {
+                var image = $(`#day${index}Icon`).attr(`src`, thunderStorm)
+                $(`#day${index}Icon`).append(image)
+            } else if (icon == `13d` || icon == `13n`) {
+                var image = $(`#day${index}Icon`).attr(`src`, snow)
+                $(`#day${index}Icon`).append(image)
+            }
+
+        index += 1;
+    }
+  })
 }
 
 // Function for displaying weather data
