@@ -1,6 +1,12 @@
 var cities = ['Sacramento', 'Denver', 'Seattle', 'Portland', 'Miami', 'Austin']
 
- function displayWeatherInfo () {
+// display date in result section
+var display = moment().format('dddd, MMMM Do')
+var date = $('#date')
+$(date).html(display)
+
+ 
+function displayWeatherInfo () {
     var city = $(this).attr("data-name")
     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=3455836d834ccb1cfc79c01accd2b751";
 
@@ -12,7 +18,7 @@ var cities = ['Sacramento', 'Denver', 'Seattle', 'Portland', 'Miami', 'Austin']
         var location = `https://api.openweathermap.org/data/2.5/uvi?appid=3455836d834ccb1cfc79c01accd2b751&lat=` + response.city.coord.lat + `&lon=` + response.city.coord.lon
         console.log(response)
 
-        // make city name appear in result section
+        // make city name appear in waether result section
         var result = $('#result-name');
     
         var name = response.city.name;
@@ -20,16 +26,18 @@ var cities = ['Sacramento', 'Denver', 'Seattle', 'Portland', 'Miami', 'Austin']
         var cityName = $(result).text(name);
         
         result.append(cityName)
-    }) 
 
-    // display date in result section
-    var display = moment().format('dddd, MMMM Do YYYY')
-    var date = $('#date')
-    $(date).html(display)
-    
- }
+    // display weather data in weather results section
+    var tempResult = $('#result-temp')
+    var humidityResult = $("#result-humidity")
+    var windSpeedResult = $("#result-wind-speed")
 
- // Function for displaying weather data
+    var tempResult = response.list[0].main.temp
+    $(temperature).text("Temperature: " + temp + "˚F")
+}) 
+}
+
+// Function for displaying weather data
 function renderButtons() {
 
 var savedBtn = $('#saved-buttons')
