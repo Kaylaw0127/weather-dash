@@ -30,13 +30,16 @@ function displayWeatherInfo () {
     // display weather data in weather results section
     var tempResult = $('#result-temp')
     var humidityResult = $("#result-humidity")
-    var windSpeedResult = $("#result-wind-speed")
+    var windSpeedResult = $("#result-windspeed")
 
     var temp = response.list[0].main.temp
     $(tempResult).text("Temperature: " + temp + "˚F")
 
     var humidity = response.list[0].main.humidity
     $(humidityResult).text("Humidity: " + humidity + "%")
+
+    var windSpeed = response.list[0].wind.speed
+    $(windSpeedResult).text("Wind Speed: " + windSpeed + " mph")
 }) 
 }
 
