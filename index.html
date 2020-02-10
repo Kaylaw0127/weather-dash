@@ -21,35 +21,33 @@
 
     <!--body-->
 
-    <div class="container container-left col-3">
+    <div class="container float-left col-3">
         <div class="input-group  mb-3">
             <input type="text" class="form-control" id="city-input" placeholder="Search for a city" aria-label="Recipient's username"
-                aria-describedby="button-addon2">
+                aria-describedby="button">
             <div class="input-group-append">
-                <button class="btn btn-primary" type="button" id="button-addon2">search</button>
+                <button class="btn btn-primary" type="button" id="button-search">search</button>
             </div>
-            <div id="buttons-view"></div>
+            <div id="saved-buttons"></div>
         </div>
     </div>
    
 
-    <div class="container container-right col-8">
+    <div class="container float-right col-8">
         <div class="block border mx-auto" >
-            <h3 class="result-name mx-auto" id="result-name">Weather Result for City</h3>
+            <h3 class="result-name mx-auto" id="result-name"></h3>
             <img class="result-icon" id="result-icon"></img>
             <div id="date-name"></div>
             <div class="result-temp" id="result-temp"></div>
             <div class="result-humidity" id="result-humidity"></div>
             <div class="result-wind-speed" id="result-windspeed"></div>
-            <div class="result-uv-index" id="result-uvindex"></div>
             </div>
         </div>
     </div>
 
-    <div class="container float-right">
-        <div class="col-sm-8">
+    <div class="container float-right col-8">
             <div class="row">
-                <h3>5-Day Forcast:</h3>
+                <h3 class="pt-5 pb-3">5-Day Forcast:</h3>
             </div>
             <div class="row">
                 <div class="card mx-auto" style="width: 7rem;">
