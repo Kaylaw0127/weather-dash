@@ -35,7 +35,8 @@ function displayWeatherInfo () {
     var temp = response.list[0].main.temp
     $(tempResult).text("Temperature: " + temp + "˚F")
 
-
+    var humidity = response.list[0].main.humidity
+    $(humidityResult).text("Humidity: " + humidity + "%")
 }) 
 }
 
