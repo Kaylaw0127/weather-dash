@@ -5,7 +5,16 @@ var display = moment().format('dddd, MMMM Do')
 var date = $('#date')
 $(date).html(display)
 
- 
+//icon images
+var clear = `http://openweathermap.org/img/wn/01d@2x.png`
+var fewClouds = `http://openweathermap.org/img/wn/02d@2x.png`
+var scatteredClouds = `http://openweathermap.org/img/wn/03d@2x.png`
+var brokenClouds = `http://openweathermap.org/img/wn/04d@2x.png`
+var showerRain = `http://openweathermap.org/img/wn/09d@2x.png`
+var rain = `http://openweathermap.org/img/wn/10d@2x.png`
+var thunderStorm = `http://openweathermap.org/img/wn/11d@2x.png`
+var snow = `http://openweathermap.org/img/wn/13d@2x.png`
+
 function displayWeatherInfo () {
     var city = $(this).attr("data-name")
     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=3455836d834ccb1cfc79c01accd2b751";
@@ -40,6 +49,37 @@ function displayWeatherInfo () {
 
     var windSpeed = response.list[0].wind.speed
     $(windSpeedResult).text("Wind Speed: " + windSpeed + " mph")
+
+    //display icons 
+    var iconResult = $("#result-icon")
+    var icon = response.list[0].weather[0].icon
+
+    if (icon == `01d` || icon == `01n`) {
+        var image = $(`#result-icon`).attr(`src`, clear)
+        $(`#result-icon`).append(image)
+    } else if (icon == `02d` || icon == `02n`) {
+        var image = $(`#result-icon`).attr(`src`, fewClouds)
+        $(`#result-icon`).append(image)
+    } else if (icon == `03d` || icon == `03n`) {
+        var image = $(`#result-icon`).attr(`src`, scatteredClouds)
+        $(`#result-icon`).append(image)
+    } else if (icon == `04d` || icon == `04n`) {
+        var image = $(`#result-icon`).attr(`src`, brokenClouds)
+        $(`#result-icon`).append(image)
+    } else if (icon == `09d` || icon == `09n`) {
+        var image = $(`#result-icon`).attr(`src`, showerRain)
+        $(`#result-icon`).append(image)
+    } else if (icon == `10d` || icon == `10n`) {
+        var image = $(`#result-icon`).attr(`src`, rain)
+        $(`#result-icon`).append(image)
+    } else if (icon == `11d` || icon == `11n`) {
+        var image = $(`#result-icon`).attr(`src`, thunderStorm)
+        $(`#result-icon`).append(image)
+    } else if (icon == `13d` || icon == `13n`) {
+        var image = $(`#result-icon`).attr(`src`, snow)
+        $(`#result-icon`).append(image)
+    }
+
 }) 
 }
 
