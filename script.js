@@ -84,7 +84,7 @@ function displayWeatherInfo () {
 
     var index = 1;
 
-    for(var i = 0; i < response.list.length; i+=8 ) {
+    for(var i = 0; i < response.list.length; i+=5 ) {
 
     var forcastDate = new Date(response.list[i].dt_txt)
     forcastDate = forcastDate.toLocaleDateString("en-US")
